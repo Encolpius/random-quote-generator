@@ -84,16 +84,17 @@ Header
 */
 
 .header {
-    width: 100%;
-    margin-bottom: 10px;
+
+  width: 100%;
+  margin: 10px 0;
 
 }
 
 .header h2 {
   padding: 25px 30px;
-  letter-spacing: .7px;
-  font-size: 34px;
-  text-align: right;
+  letter-spacing: 2.8px;
+  font-size: 64px;
+  text-align: center;
   color: red;
   font-family: 'Creepster', cursive;
 }
@@ -112,25 +113,22 @@ Quotes
 }
 
 .quotes h2 {
-  padding-top: 3em;
   font-size: 16px;
   font-family: 'Coming Soon', cursive;
   color: white;
-  margin-bottom: 6px;
-
 }
 
 button {
   margin: 0 auto;
   color: black;
-  padding: 5px;
   background-color: white;
   border-radius: 5px;
 }
 
 .quotes img {
-  height: 97px;
-  width: 75px;
+  height: 107px;
+  width: 85px;
+  margin-bottom: 6px;
 }
 
 .quotes p {
@@ -147,3 +145,19 @@ button {
   color: red;
   font-family: 'IM Fell DW Pica SC', serif;
 }
+
+/*
+=============================
+Movie Descriptions
+=============================
+*/
+
+.description {
+  float: left;
+}
+
+/*
+=============================
+Movie Posters
+=============================
+*/
