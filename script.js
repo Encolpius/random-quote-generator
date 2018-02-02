@@ -7,7 +7,7 @@ let title = document.getElementById('title');
 let director = document.getElementById('director');
 let year = document.getElementById('year');
 let trivia = document.getElementById('trivia');
-let poster = document.querySelector('poster');
+let poster = document.getElementById('poster');
 let randomIndex;
 
 
@@ -39,7 +39,7 @@ $(clickForMore).click(function() {
   title.textContent = movies.titles[randomIndex];
   director.textContent = movies.directors[randomIndex];
   year.textContent = movies.year[randomIndex];
-  
+  poster.src = movies.posters[randomIndex];
 });
 
 
@@ -71,7 +71,7 @@ var movies = {
                "They're eating her! And then they're going to eat me! OH MY GOOOOOOOOD!",
                "It rubs the lotion on its skin, or else it gets the hose again!",
                "She begged for her life, and the life of the baby inside her...oh! He didn't know.",
-               "Live or die, make your choice",
+               "Live or die, make your choice.",
                "They're going to laugh at you!",
                "Where we're going, we don't need eyes to see.",
                "I did it all for you, Damien!"],
@@ -140,24 +140,23 @@ var movies = {
                "1976"],
 
   posters:  [ "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg",
-              "images/cthulhu.jpg"],
+              "images/2001.jpg",
+              "images/jaws.jpg",
+              "images/they-live.jpg",
+              "images/shining.jpg",
+              "images/it.jpg",
+              "images/hellraiser.jpg",
+              "images/psycho.jpg",
+              "images/pet.jpg",
+              "images/living-dead.jpg",
+              "images/freaks.jpg",
+              "images/donnie.jpg",
+              "images/no-country.jpg",
+              "images/troll.jpg",
+              "images/silence.jpg",
+              "images/se7en.jpg",
+              "images/saw.jpg",
+              "images/carrie.jpg",
+              "images/horizon.jpg",
+              "images/omen.jpg"],
 }
