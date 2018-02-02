@@ -56,7 +56,9 @@ table {
   background-color: black;
 }
 
-
+body {
+  margin-top: 10px;
+}
 
 /*
 =============================
@@ -71,11 +73,44 @@ Index
 
 /*
 =============================
-Typography
+Movie Info
 =============================
 */
 
+.movie-info {
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  float: left;
+  margin-left: 16em;
+  border: 1px solid red;
+  border-radius: 4%;
+}
 
+.movie-info h3 {
+  color: white;
+  font-size: 24px;
+  padding: 8px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.movie-info span {
+  color: red;
+  padding-left: 10px;
+}
+
+/*
+=============================
+Image
+=============================
+*/
+
+.poster img {
+  max-width: 256px;
+  max-height: 389px;
+  margin-left: 16em;
+}
 
 /*
 =============================
@@ -84,7 +119,6 @@ Header
 */
 
 .header {
-
   width: 100%;
   margin: 10px 0;
 
@@ -132,6 +166,7 @@ button {
 }
 
 .quotes p {
+  margin-top: 4px;
   color: white;
   font-size: 35px;
   font-family: 'IM Fell DW Pica SC', serif;
