@@ -1,21 +1,17 @@
 /* Starting Variables */
 
 let jigsawImage = document.getElementById('jigsaw-image');
-let response = document.getElementById('response');
+let quoteSection = document.getElementById('quoteSection');
 let clickForMore = document.getElementById('clickForMore');
-let title = document.getElementById('title');
-let director = document.getElementById('director');
-let year = document.getElementById('year');
-let trivia = document.getElementById('trivia');
-let poster = document.getElementById('poster');
+
+let tweetButton = document.getElementById('tweetbutton');
 let randomIndex;
 
 
 /* Starting jQuery */
 
 $(document).ready(function() {
-  $(response).hide();
-  $(clickForMore).hide();
+  $(quoteSection).hide();
 });
 
 
@@ -23,33 +19,45 @@ $(document).ready(function() {
 
 $(jigsawImage).click(function() {
   let $this = $(this);
-  $(response).fadeOut(function() {
+
+  $('h3').fadeIn();
+  $('#poster').fadeIn();
+  $('footer').fadeIn();
+
+  $(quoteSection).fadeOut(function() {
     $this.next().fadeIn();
-    $(clickForMore).fadeIn();
-  let randomPick = randomQuote();
-  response.textContent = randomPick;
-  $(response).fadeIn('slow');
+
+  quoteSection.textContent = randomQuote();
+  $(quoteSection).fadeIn('slow');
+
+
+  /* Movie Descriptors */
+
+  descriptors();
+
   });
 });
 
+let title = document.getElementById('title');
+let director = document.getElementById('director');
+let year = document.getElementById('year');
+let poster = document.getElementById('poster');
 
-/* Pulling movie descriptions */
-
-$(clickForMore).click(function() {
+function descriptors() {
   title.textContent = movies.titles[randomIndex];
   director.textContent = movies.directors[randomIndex];
   year.textContent = movies.year[randomIndex];
   poster.src = movies.posters[randomIndex];
-});
+}
 
-
+let quote = ' ';
 
 /* Random Quote Generator  */
 function randomQuote() {
-  var quote = movies.quotes[Math.floor(Math.random() * movies.quotes.length)];
+  quote = movies.quotes[Math.floor(Math.random() * movies.quotes.length)];
   randomIndex = movies.quotes.indexOf(quote);
+  tweetButton.href = 'https://twitter.com/intent/tweet?text=' + encodeURI(quote);
   return quote;
-
 }
 
 /* Lists for all random content */
@@ -70,7 +78,7 @@ var movies = {
                "What's the most you ever lost on a coin toss?",
                "They're eating her! And then they're going to eat me! OH MY GOOOOOOOOD!",
                "It rubs the lotion on its skin, or else it gets the hose again!",
-               "She begged for her life, and the life of the baby inside her...oh! He didn't know.",
+               "She begged for her life, and the life of the baby inside her...",
                "Live or die, make your choice.",
                "They're going to laugh at you!",
                "Where we're going, we don't need eyes to see.",
@@ -159,4 +167,6 @@ var movies = {
               "images/carrie.jpg",
               "images/horizon.jpg",
               "images/omen.jpg"],
-}
+
+
+};

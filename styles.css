@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css?family=Coming+Soon');
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -70,6 +71,20 @@ Index
   text-align: center;
 }
 
+/*
+=============================
+Typography
+=============================
+*/
+
+p {
+  padding-top: 1em;
+}
+
+h3,
+#poster {
+  display: none;
+}
 
 /*
 =============================
@@ -78,38 +93,37 @@ Movie Info
 */
 
 .movie-info {
-  width: 600px;
-  height: 400px;
+  margin: 0 auto;
+  margin-top: -25px;
+  position: relative;
+  width: 800px;
+  height: 420px;
   padding: 20px;
-  float: left;
-  margin-left: 16em;
-  border: 1px solid red;
   border-radius: 4%;
+  font-family: 'Kalam', cursive;
+}
+
+.movie-info h3:first-of-type  {
+  margin-top: 2.7em;
 }
 
 .movie-info h3 {
   color: white;
   font-size: 24px;
-  padding: 8px;
+  padding: 12px 8px;
   margin-bottom: 30px;
-  font-style: italic;
 }
 
 .movie-info span {
   color: red;
   padding-left: 10px;
+  font-size: 30px;
 }
 
-/*
-=============================
-Image
-=============================
-*/
-
-.poster img {
-  max-width: 256px;
-  max-height: 389px;
-  margin-left: 16em;
+#quoteSection {
+  width: 760px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /*
@@ -121,11 +135,12 @@ Header
 .header {
   width: 100%;
   margin: 10px 0;
+  padding-top: 20px;
 
 }
 
 .header h2 {
-  padding: 25px 30px;
+  padding: 15px 30px;
   letter-spacing: 2.8px;
   font-size: 64px;
   text-align: center;
@@ -181,18 +196,47 @@ button {
   font-family: 'IM Fell DW Pica SC', serif;
 }
 
-/*
-=============================
-Movie Descriptions
-=============================
-*/
-
-.description {
-  float: left;
-}
 
 /*
 =============================
 Movie Posters
 =============================
 */
+
+#poster {
+  min-width: 256px;
+  max-width: 256px;
+  min-height: 389px;
+  max-height: 389px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*
+=============================
+Footer
+=============================
+*/
+
+footer {
+  display: none;
+}
+
+.twitter {
+  margin: 25px auto;
+  height: 20px;
+  box-sizing: border-box;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+.twitter-share-button {
+  padding: 1px 8px 1px 8px;
+  background-color: #1b95e0;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  font-style: "Helvetica Neue";
+}
